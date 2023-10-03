@@ -26,7 +26,6 @@ obj = {
   ]
 }
 
-for i in range
-  if(obj.studentList[i] == "이민구") {
-    print("이민구는 ", (i + 1),"번에 있습니다.");
-console.log(obj.address);
+for i in range(len(obj["studentList"])):
+  if(obj["studentList"][i] == "이민구"):
+    print("이민구는 %d번에 있습니다." % (i + 1))
