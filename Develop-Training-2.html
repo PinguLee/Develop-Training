@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <div id="my-form">
+      <label for="user-id">ID</label>
+      <input type="text" id="user-id" name="user-id">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password">
+      <input type="button" value="Submit">
+
+      <script>
+        const userInfo = {
+          userID: "admin",
+          password: "1234"
+        };
+
+        let form = document.getElementById("my-form");
+        let userID = document.getElementById("user-id").value;
+        let password = document.getElementById("password").value;
+        form.addEventListener("click", function(e) {
+          if(userID === userInfo.userID && password === userInfo.password) {
+            console.log(`User ID: ${userID}`);
+          } else {
+            console.log(`User ID: ${password}`);
+          }
+        });
+      </script>
+    </div>
+  </div>
+</body>
+</html>
