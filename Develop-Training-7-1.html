@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h3 id="price-status">입력을 기다리는 중...</h3>
+  <input type="text" id="price-input" placeholder="값을 작성해주세요.">
+
+  <script>
+    const price = {
+      input: document.getElementById('price-input'),
+      status: document.getElementById('price-status')
+    };
+
+    function textInsert(targetElement, text) {
+      targetElement.textContent = text;
+    }
+
+    priceInput.addEventListener('input', function () {
+      let isCondition = isNan(priceInput.value);
+      let inputValueLength = priceInput.value.length;
+      let outputText = ["숫자를 입력해주세요.", "값을 입력하셨습니다.", "값을 입력해주세요."]
+
+      if (inputValueLength > 0) {
+        if (isCondition === true) {
+          textInsert(priceStatus, outputText[0]);
+          return;
+        } else {
+        textInsert(priceStatus, outputText[1]);
+        }
+      } else {
+        textInsert(priceStatus, outputText[2]);
+      }
+    });
+  </script>
+</body>
+
+</html>

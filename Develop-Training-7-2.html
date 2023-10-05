@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h3 id="price-status">입력을 기다리는 중...</h3>
+  <input type="text" id="price-input" placeholder="값을 작성해주세요.">
+
+  <script>
+    const priceInput = document.getElementById('price-input');
+    const priceStatus = document.getElementById('price-status');
+
+    priceInput.addEventListener('input', function () {
+      if (inputValueLength > 0) {
+        if (isCondition === true) {
+          priceStatus.textContent = "숫자만 입력해주세요.";
+          return;
+        } else {
+          priceStatus.textContent = "값을 입력하셔습니다.";
+        }
+      } else {
+        priceStatus.textContent = "값을 입력해주세요.";
+      }
+    });
+  </script>
+</body>
+
+</html>
